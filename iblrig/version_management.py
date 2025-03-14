@@ -171,7 +171,9 @@ def get_remote_tags() -> None:
         return
     if (branch := get_branch()) is None:
         return
-    call_git('fetch', 'origin', branch, '-t', '-q', '-f', on_error='log')
+    #call_git('fetch', 'origin', branch, '-t', '-q', '-f', on_error='log')
+    #3/14/2025: Changed "origin" to "upstream" so that version control would check the ibl github for updates, not the repo I created to store our version
+    call_git('fetch', 'upstream', branch, '-t', '-q', '-f', on_error='log')
 
 
 @cache
@@ -229,8 +231,9 @@ def get_remote_version() -> version.Version | None:
         log.error('Cannot obtain remote version: Not connected to internet')
         return None
 
-    references = call_git('ls-remote', '-t', '-q', '--exit-code', '--refs', 'origin', 'tags', '*', on_error='log')
-
+    #references = call_git('ls-remote', '-t', '-q', '--exit-code', '--refs', 'origin', 'tags', '*', on_error='log')
+    #3/14/2025: Changed "origin" to "upstream" so that version control would check the ibl github for updates, not the repo I created to store our version
+    references = call_git('ls-remote', '-t', '-q', '--exit-code', '--refs', 'upstream', 'tags', '*', on_error='log')
     try:
         log.debug('Parsing local version string')
         get_remote_version.remote_version = max([version.parse(v) for v in re.findall(r'/(\d+\.\d+\.\d+)', references)])
