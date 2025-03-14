@@ -5,6 +5,7 @@ import platform
 import re
 import shutil
 import socket
+import time
 import subprocess
 from collections.abc import Callable
 from dataclasses import dataclass
@@ -111,44 +112,118 @@ def get_anydesk_id(format_id: bool = True, silent: bool = False) -> str | None:
             raise e
     return anydesk_id
 
-
-def internet_available(host: str = '8.8.8.8', port: int = 53, timeout: int = 3, force_update: bool = False) -> bool:
+def internet_available(host: str = '8.8.8.8', port: int = 53, timeout: int = 3,
+                       force_update: bool = False, retries: int = 5, delay: int = 3,
+                       additional_hosts: list = None) -> bool:
     """
-    Check if the internet connection is available.
+    Check if the internet connection is available, retrying if needed.
 
-    This function checks if an internet connection is available by attempting to
-    establish a connection to a specified host and port. It will use a cached
-    result if the latter is available and `force_update` is set to False.
-
-    Parameters
-    ----------
-    host : str, optional
-        The IP address or domain name of the host to check the connection to.
-        Default is "8.8.8.8" (Google's DNS server).
-    port : int, optional
-        The port to use for the connection check. Default is 53 (DNS port).
-    timeout : int, optional
-        The maximum time (in seconds) to wait for the connection attempt.
-        Default is 3 seconds.
-    force_update : bool, optional
-        If True, force an update and recheck the internet connection even if
-        the result is cached. Default is False.
-
-    Returns
-    -------
-    bool
-        True if an internet connection is available, False otherwise.
+    Parameters:
+        host (str): The primary host to try. Default is '8.8.8.8'.
+        port (int): The port to use for the connection check. Default is 53.
+        timeout (int): Connection timeout in seconds. Default is 3.
+        force_update (bool): If True, ignore cached results. Default is False.
+        retries (int): Number of times to retry the connection. Default is 5.
+        delay (int): Delay in seconds between retries. Default is 3.
+        additional_hosts (list): Optional list of additional hosts to try if the primary fails.
+    
+    Returns:
+        bool: True if the connection succeeded, False otherwise.
     """
+    # Create a list of hosts to try, starting with the primary host
+    hosts = [host]
+    if additional_hosts:
+        hosts.extend(additional_hosts)
+    else:
+        # Provide a fallback host, e.g., Cloudflare's DNS, if no additional hosts specified
+        hosts.append('1.1.1.1')
+
+    # Use cached value if available and not forced to update
     if not force_update and hasattr(internet_available, 'return_value'):
         return internet_available.return_value
-    try:
-        socket.setdefaulttimeout(timeout)
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            s.connect((host, port))
-        internet_available.return_value = True
-    except OSError:
-        internet_available.return_value = False
-    return internet_available.return_value
+
+    for attempt in range(retries):
+        for current_host in hosts:
+            try:
+                socket.setdefaulttimeout(timeout)
+                with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+                    s.connect((current_host, port))
+                internet_available.return_value = True
+                print(f"Internet check succeeded via {current_host}")
+                return True  # Connection succeeded, exit early
+            except OSError as e:
+                print(f"Internet check to {current_host} failed: {e}")
+        print(f"Retrying internet check ({attempt+1}/{retries}) after {delay} seconds...")
+        time.sleep(delay)
+
+    internet_available.return_value = False
+    return False
+
+# def internet_available(host: str = '8.8.8.8', port: int = 53, timeout: int = 3, force_update: bool = False, retries: int = 5, delay: int = 3) -> bool:
+#     """
+#     Check if the internet connection is available, retrying if needed.
+
+#     Parameters
+#     ----------
+#     retries : int
+#         Number of times to retry before failing.
+#     delay : int
+#         Seconds to wait between retries.
+#     """
+#     if not force_update and hasattr(internet_available, 'return_value'):
+#         return internet_available.return_value
+
+#     for attempt in range(retries):
+#         try:
+#             socket.setdefaulttimeout(timeout)
+#             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+#                 s.connect((host, port))
+#             internet_available.return_value = True
+#             return True  # Exit early if connection works
+#         except OSError:
+#             print(f"Internet check failed, retrying ({attempt+1}/{retries})...")
+#             time.sleep(delay)  # Wait before retrying
+
+#     internet_available.return_value = False
+#     return False
+
+# def internet_available(host: str = '8.8.8.8', port: int = 53, timeout: int = 3, force_update: bool = False) -> bool:
+#     """
+#     Check if the internet connection is available.
+
+#     This function checks if an internet connection is available by attempting to
+#     establish a connection to a specified host and port. It will use a cached
+#     result if the latter is available and `force_update` is set to False.
+
+#     Parameters
+#     ----------
+#     host : str, optional
+#         The IP address or domain name of the host to check the connection to.
+#         Default is "8.8.8.8" (Google's DNS server).
+#     port : int, optional
+#         The port to use for the connection check. Default is 53 (DNS port).
+#     timeout : int, optional
+#         The maximum time (in seconds) to wait for the connection attempt.
+#         Default is 3 seconds.
+#     force_update : bool, optional
+#         If True, force an update and recheck the internet connection even if
+#         the result is cached. Default is False.
+
+#     Returns
+#     -------
+#     bool
+#         True if an internet connection is available, False otherwise.
+#     """
+#     if not force_update and hasattr(internet_available, 'return_value'):
+#         return internet_available.return_value
+#     try:
+#         socket.setdefaulttimeout(timeout)
+#         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+#             s.connect((host, port))
+#         internet_available.return_value = True
+#     except OSError:
+#         internet_available.return_value = False
+#     return internet_available.return_value
 
 
 def alyx_reachable() -> bool:

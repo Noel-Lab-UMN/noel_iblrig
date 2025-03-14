@@ -1,0 +1,16 @@
+devices:
+  cameras:
+    left:
+      collection: raw_video_data
+procedures:
+- handling_habituation
+projects:
+- practice
+sync:
+  bpod:
+    acquisition_software: pybpod
+    collection: raw_task_data_00
+    extension: .jsonable
+tasks:
+- _iblrig_tasks_advancedChoiceWorld:
+    collection: raw_task_data_00

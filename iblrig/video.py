@@ -140,7 +140,9 @@ def install_pyspin():
     # Check prerequisites
     if os.name != 'nt':
         raise Exception('install_pyspin can only be run on Windows.')
-    if sys.base_prefix == sys.prefix:
+    # if sys.base_prefix == sys.prefix:
+    #     raise Exception('install_pyspin needs to be started in the IBLRIG venv.')
+    if not (os.environ.get('CONDA_PREFIX') or hasattr(sys, 'real_prefix')):
         raise Exception('install_pyspin needs to be started in the IBLRIG venv.')
 
     # Display some information

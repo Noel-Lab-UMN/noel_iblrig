@@ -1,0 +1,17 @@
+devices:
+  microphone:
+    microphone:
+      collection: raw_task_data_00
+      sync_label: audio
+procedures:
+- Behavior training/tasks
+projects:
+- practice
+sync:
+  bpod:
+    acquisition_software: pybpod
+    collection: raw_task_data_00
+    extension: .jsonable
+tasks:
+- _iblrig_tasks_habituationChoiceWorld:
+    collection: raw_task_data_00

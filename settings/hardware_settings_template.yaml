@@ -26,7 +26,7 @@ device_sound:
   OUTPUT: sysdefault  # harp, hifi, xonar or sysdefault
   COM_SOUND: null
   AMP_TYPE: null  # harp or AMP2X15
-device_microphone:
+device_microphone: 
   BONSAI_WORKFLOW: devices/microphone/record_mic.bonsai
 device_valve:
   WATER_CALIBRATION_DATE: 2099-12-31

@@ -112,6 +112,7 @@ class HardwareSettingsRotaryEncoder(BunchModel):
 
 
 class HardwareSettingsScreen(BunchModel):
+    #DISPLAY_IDX: int = Field(ge=0, le=1)  # -1 = Default, 0 = First, 1 = Second, 2 = Third, etc
     DISPLAY_IDX: int = Field(ge=0, le=1)  # -1 = Default, 0 = First, 1 = Second, 2 = Third, etc
     SCREEN_FREQ_TARGET: int = Field(gt=0)
     SCREEN_FREQ_TEST_DATE: date | None = None

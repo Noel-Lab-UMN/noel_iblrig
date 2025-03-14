@@ -87,13 +87,15 @@ class Frame2TTLCalibrationTarget(QtWidgets.QDialog):
         if screen_index is None:
             for idx, screen in enumerate(QtWidgets.QApplication.screens()):
                 screen_index = idx
-                if screen.size().width() == 2048 and screen.size().height() == 1536:
+                #if screen.size().width() == 2048 and screen.size().height() == 1536:
+                if screen.size().width() == 1280 and screen.size().height() == 800:
                     break
             else:  # if no break statement occurred, i.e. no iPad screen was found
                 screen_index = 0
                 screen = QtWidgets.QApplication.screens()[0]
                 log.warning(
-                    f'Could not identify iPad screen (2048x1536) - defaulting to Screen {screen_index} '
+                    # f'Could not identify iPad screen (2048x1536) - defaulting to Screen {screen_index} '
+                    f'Could not identify iPad screen (1280x1024) - defaulting to Screen {screen_index} '
                     f'({screen.geometry().width()}x{screen.geometry().height()}).'
                 )
 
@@ -104,7 +106,8 @@ class Frame2TTLCalibrationTarget(QtWidgets.QDialog):
             aspect_ratio = round(screen_width / screen_height, 2)
 
             # the default relative parameters are meant for 4:3 screens and need to be adapted for other aspect ratios
-            if rel_pos_x == 1.33 and aspect_ratio != rel_pos_x:
+            #if rel_pos_x == 1.33 and aspect_ratio != rel_pos_x:
+            if rel_pos_x == 1.6 and aspect_ratio != rel_pos_x:
                 log.warning(
                     f'Screen {screen_index} has an unexpected aspect ratio of {aspect_ratio:0.2f}:1 - '
                     f'setting rel_pos_x to {aspect_ratio} instead of {rel_pos_x} accordingly.'

@@ -1,0 +1,90 @@
+2025-03-12 12:09:04 INFO     util.py:227  File log initiated iblrig_file
+2025-03-12 12:09:04 INFO     transfer_experiments.py:362  The remote path is unspecified and remote experiment.description stub creation is omitted.
+2025-03-12 12:09:04 INFO     transfer_experiments.py:389  Written data to local session at : C:\Users\bluhm114\iblrigv8\data\noel_lab\Subjects\test_subject\2025-03-12\002\_ibl_experiment.description_behavior.yaml.
+2025-03-12 12:09:04 WARNING  base_tasks.py:544  Not registering test subject to Alyx
+2025-03-12 12:09:04 INFO     base_choice_world.py:188  Starting trial: 0
+2025-03-12 12:09:04 INFO     base_choice_world.py:320  First trial initializing, will move to next trial only if:
+2025-03-12 12:09:04 INFO     base_choice_world.py:321  1. camera is detected
+2025-03-12 12:09:04 INFO     base_choice_world.py:322  2. 0.0 sec have elapsed
+2025-03-12 12:09:04 INFO     tools.py:356  Starting Bonsai workflow `TrainingRig_SaveVideo_TrainingTasks.bonsai`
+2025-03-12 12:09:04 INFO     base_tasks.py:843  Bonsai camera recording process started
+2025-03-12 12:09:38 WARNING  base_tasks.py:475  Key "debias_trial" in trial_data is missing from TrialDataModel - its value (False) will not be validated.
+2025-03-12 12:09:39 INFO     base_choice_world.py:590  Outcome of Trial #0:
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Stim. Position:   35.0
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Stim. Contrast:   0.125
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Stim. Phase:      1.83
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Stim. p Left:     0.5
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Water delivered:  1.5 µl
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Time from Start:  0:02:11.819136
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Temperature:      nan °C
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Air Pressure:     nan mb
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Rel. Humidity:    nan %
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Response Time:    30.52 s
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - Trial Correct:    True
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - N Trials Correct: 1
+2025-03-12 12:09:39 INFO     base_choice_world.py:594  - N Trials Error:   -1
+2025-03-12 12:09:39 INFO     base_choice_world.py:188  Starting trial: 1
+2025-03-12 12:09:53 WARNING  base_choice_world.py:544  NO CAMERA SYNC PULSES RECEIVED ON BPOD'S BEHAVIOR PORT 1
+2025-03-12 12:09:53 INFO     base_choice_world.py:590  Outcome of Trial #1:
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Stim. Position:   -35.0
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Stim. Contrast:   0.125
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Stim. Phase:      2.91
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Stim. p Left:     0.5
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Water delivered:  1.5 µl
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Time from Start:  0:02:26.200476
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Temperature:      nan °C
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Air Pressure:     nan mb
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Rel. Humidity:    nan %
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Response Time:    10.67 s
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - Trial Correct:    False
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - N Trials Correct: 1
+2025-03-12 12:09:53 INFO     base_choice_world.py:594  - N Trials Error:   0
+2025-03-12 12:09:53 INFO     base_choice_world.py:188  Starting trial: 2
+2025-03-12 12:10:15 WARNING  base_choice_world.py:544  NO CAMERA SYNC PULSES RECEIVED ON BPOD'S BEHAVIOR PORT 1
+2025-03-12 12:10:15 INFO     base_choice_world.py:590  Outcome of Trial #2:
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Stim. Position:   -35.0
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Stim. Contrast:   0.0
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Stim. Phase:      5.89
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Stim. p Left:     0.5
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Water delivered:  1.5 µl
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Time from Start:  0:02:47.846837
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Temperature:      nan °C
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Air Pressure:     nan mb
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Rel. Humidity:    nan %
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Response Time:    17.35 s
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - Trial Correct:    False
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - N Trials Correct: 1
+2025-03-12 12:10:15 INFO     base_choice_world.py:594  - N Trials Error:   1
+2025-03-12 12:10:15 INFO     base_choice_world.py:188  Starting trial: 3
+2025-03-12 12:10:27 WARNING  base_choice_world.py:544  NO CAMERA SYNC PULSES RECEIVED ON BPOD'S BEHAVIOR PORT 1
+2025-03-12 12:10:27 INFO     base_choice_world.py:590  Outcome of Trial #3:
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Stim. Position:   35.0
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Stim. Contrast:   0.5
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Stim. Phase:      3.45
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Stim. p Left:     0.5
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Water delivered:  1.5 µl
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Time from Start:  0:03:00.529240
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Temperature:      nan °C
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Air Pressure:     nan mb
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Rel. Humidity:    nan %
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Response Time:    9.48 s
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - Trial Correct:    False
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - N Trials Correct: 1
+2025-03-12 12:10:27 INFO     base_choice_world.py:594  - N Trials Error:   2
+2025-03-12 12:10:27 INFO     base_choice_world.py:188  Starting trial: 4
+2025-03-12 12:10:31 WARNING  base_choice_world.py:544  NO CAMERA SYNC PULSES RECEIVED ON BPOD'S BEHAVIOR PORT 1
+2025-03-12 12:10:31 INFO     base_choice_world.py:590  Outcome of Trial #4:
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Stim. Position:   35.0
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Stim. Contrast:   0.5
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Stim. Phase:      4.85
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Stim. p Left:     0.5
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Water delivered:  1.5 µl
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Time from Start:  0:03:04.755032
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Temperature:      nan °C
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Air Pressure:     nan mb
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Rel. Humidity:    nan %
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Response Time:    1.21 s
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - Trial Correct:    False
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - N Trials Correct: 1
+2025-03-12 12:10:31 INFO     base_choice_world.py:594  - N Trials Error:   3
+2025-03-12 12:10:31 INFO     base_choice_world.py:188  Starting trial: 5

@@ -1,0 +1,6 @@
+2025-02-28 16:31:43 INFO     util.py:227  File log initiated iblrig_file
+2025-02-28 16:31:43 INFO     transfer_experiments.py:362  The remote path is unspecified and remote experiment.description stub creation is omitted.
+2025-02-28 16:31:43 INFO     transfer_experiments.py:389  Written data to local session at : C:\Users\bluhm114\iblrigv8\data\noel_lab\Subjects\test_subject\2025-02-28\002\_ibl_experiment.description_behavior.yaml.
+2025-02-28 16:31:43 WARNING  base_tasks.py:544  Not registering test subject to Alyx
+2025-02-28 16:31:43 INFO     base_choice_world.py:188  Starting trial: 0
+2025-02-28 16:31:43 INFO     base_choice_world.py:664  Waiting for camera pulses...

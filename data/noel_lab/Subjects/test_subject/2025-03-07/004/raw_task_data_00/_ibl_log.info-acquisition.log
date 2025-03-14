@@ -1,0 +1,10 @@
+2025-03-07 11:39:50 INFO     util.py:227  File log initiated iblrig_file
+2025-03-07 11:39:50 INFO     transfer_experiments.py:362  The remote path is unspecified and remote experiment.description stub creation is omitted.
+2025-03-07 11:39:50 INFO     transfer_experiments.py:389  Written data to local session at : C:\Users\bluhm114\iblrigv8\data\noel_lab\Subjects\test_subject\2025-03-07\004\_ibl_experiment.description_behavior.yaml.
+2025-03-07 11:39:50 WARNING  base_tasks.py:544  Not registering test subject to Alyx
+2025-03-07 11:39:50 INFO     base_choice_world.py:188  Starting trial: 0
+2025-03-07 11:39:50 INFO     base_choice_world.py:320  First trial initializing, will move to next trial only if:
+2025-03-07 11:39:50 INFO     base_choice_world.py:321  1. camera is detected
+2025-03-07 11:39:50 INFO     base_choice_world.py:322  2. 0.0 sec have elapsed
+2025-03-07 11:39:50 INFO     tools.py:356  Starting Bonsai workflow `TrainingRig_SaveVideo_TrainingTasks.bonsai`
+2025-03-07 11:39:50 INFO     base_tasks.py:843  Bonsai camera recording process started
