@@ -1,5 +1,11 @@
-IBLRIG
+IBLRIG (Noel Lab)
 ======
+
+This is our version of the IBL codebase. It has a few minor modifications compared to version 8.27.4 of the iblrigv8 codebase. Namely, I added a few additional internet checks and tweaked some settings. However, I see our version diverging more in the future, hence why I created this repository. The original IBL repository has been added as an **upstream remote resource** so we can fetch updates pushed by the IBL.
+
+To do so, run `git fetch upstream` then merge or rebase the changes onto our branch. 
+
+------
 
 Welcome to the International Brain Laboratory's decision-making task implementation.
 
@@ -20,3 +26,5 @@ Links
 [![GitHub tag](https://img.shields.io/github/v/tag/int-brain-lab/iblrig)](https://github.com/int-brain-lab/iblrig/tags)
 [![GitHub Discussions](https://img.shields.io/github/discussions/int-brain-lab/iblrig)](https://github.com/int-brain-lab/iblrig/discussions)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit)
+
+
