@@ -7,6 +7,7 @@ pybpod_settings.yaml
 settings/alyx
 settings/visvis/
 docs/build
+data/
 
 pybpod_fixtures/*
 Bonsai/*
