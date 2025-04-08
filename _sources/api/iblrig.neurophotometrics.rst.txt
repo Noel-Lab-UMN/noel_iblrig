@@ -1,0 +1,16 @@
+iblrig.neurophotometrics
+========================
+
+.. automodule:: iblrig.neurophotometrics
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :nosignatures:
+      :toctree:
+   
+      copy_photometry_subject
+      init_neurophotometrics_subject
+      start_photometry_task_cmd
+      start_workflow_cmd
+   

@@ -1,0 +1,6 @@
+iblrig.neurophotometrics.copy\_photometry\_subject
+==================================================
+
+.. currentmodule:: iblrig.neurophotometrics
+
+.. autofunction:: copy_photometry_subject

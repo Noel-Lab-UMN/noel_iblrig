@@ -1,0 +1,6 @@
+iblrig.neurophotometrics.start\_workflow\_cmd
+=============================================
+
+.. currentmodule:: iblrig.neurophotometrics
+
+.. autofunction:: start_workflow_cmd

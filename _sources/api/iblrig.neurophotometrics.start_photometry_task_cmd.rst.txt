@@ -1,0 +1,6 @@
+iblrig.neurophotometrics.start\_photometry\_task\_cmd
+=====================================================
+
+.. currentmodule:: iblrig.neurophotometrics
+
+.. autofunction:: start_photometry_task_cmd
